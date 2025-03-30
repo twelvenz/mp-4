@@ -1,5 +1,5 @@
 import Card from "@/app/components/card";
-import { getCheckData } from "@/app/api/get-time-data/route";
+import { getCheckData } from "@/app/api/get-time-data/action";
 
 export default async function Home() {
     const { data } = await getCheckData("Boston, MA");

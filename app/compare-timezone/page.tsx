@@ -1,6 +1,6 @@
 "use client";
 
-import { getCompareData } from "@/app/api/get-time-data/route";
+import { getCompareData } from "@/app/api/get-time-data/action";
 import { useState } from "react";
 import { LocationData } from "@/types";
 import Card from "@/app/components/card";
