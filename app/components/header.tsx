@@ -6,8 +6,8 @@ export default function Header() {
         <header className="flex justify-between items-center h-20 bg-white mb-8">
             <nav className="p-2 m-4">
                 <Link href={`/`} className={linkStyle}>Home</Link>
-                <Link href={`/check-timezone`} className={linkStyle}>Timezone Checker</Link>
-                <Link href={`/compare-timezone`} className={linkStyle}>Timezone Comparer</Link>
+                <Link href={`/check-timezone`} className={linkStyle}>Check Times</Link>
+                <Link href={`/compare-timezone`} className={linkStyle}>Compare Times</Link>
             </nav>
         </header>
     )
