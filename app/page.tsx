@@ -1,9 +1,6 @@
-import Card from "@/app/components/card";
-import { getCheckData } from "@/app/api/get-time-data/action";
+import Image from "next/image";
 
 export default async function Home() {
-    const { data } = await getCheckData("Boston, MA");
-    if (!data) return <p>loading data...</p>;
 
     return (
         <>
@@ -11,13 +8,19 @@ export default async function Home() {
 
                 <div className="text-center mb-4">
                     <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                        Current Time in Boston, MA
+                        Timezone Checker App
                     </h1>
                     <p className="text-gray-600 mb-5">
-                        Please refresh if this does not load..
+                        No more converting times mentally
                     </p>
 
-                    <Card location={data} />
+                    <Image
+                        src="/clock.png"
+                        width={300}
+                        height={300}
+                        alt="Image of a clock"
+                        className="m-auto mb-6 p-5 w-80% h-auto"
+                    />
 
                     <p className="text-l text-gray-700">
                         Click Check to check time of another location.
