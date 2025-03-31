@@ -14,8 +14,10 @@ export default function CompareTime() {
 
         const { data } = await getCompareData(myLoc, targetLoc);
 
-        if (data) {
+        if (data && data.base_location.datetime && data.target_location.datetime) {
             setLocations({myLoc: data.base_location, targetLoc: data.target_location});
+        } else {
+            setLocations({myLoc: null, targetLoc: null});
         }
     };
 

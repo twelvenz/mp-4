@@ -14,8 +14,10 @@ export default function CheckTime(){
         const { data } = await getCheckData(location);
         console.log(data);
 
-        if (data) {
+        if (data && data.datetime) {
             setLocation(data);
+        } else {
+            setLocation(null);
         }
 
     }
